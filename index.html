@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+<meta charset="UTF-8">
+<title>Crossover Studio</title>
+    
+<style>
+
+    /* The navigation bar */
+.navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    display: ;
+    top: 2%; /* Position the navbar at the top of the page */
+    right: 2%;
+    bottom: 2%;
+    width: 10%; /* Full width */
+    border-radius: 10px;
+    animation: slideInRight;
+    animation-duration: 1s; 
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f6b231;
+  text-align: center;
+  padding-right: calc((100% - 1em)/2);
+  padding-left: calc((100% - 1em)/2);
+  padding-bottom: 20%;
+  padding-top: 20%;
+  text-decoration: none;
+  vertical-align: middle;
+
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #f5b231;
+  color: black;
+}
+.footer {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    animation: slideInRight;
+    animation-duration: 1s; 
+    z-index: -2;
+}
+
+.header {
+    position: fixed;
+    z-index: 9990;
+    width: 89%;
+    padding-right: 12%;
+}
+
+.toplogo {
+    
+    position: fixed;
+    left: 14%;
+    top: 30px;
+    width: 40%;
+    
+}
+    
+.video{
+    margin: 1%;
+    left: 2%;
+}
+.main {
+    margin-top: calc(3% + 100px);
+    margin-right: calc(14% + 10px);
+    height: 2000px; /* Used in this example to enable scrolling */
+}
+
+    .borderorange{
+        box-shadow: 
+            0 0 0.1vw  0.2vw rgb(256,256,256),   
+            0 0 0.4vw  0.6vw #f6b231, 
+            0 0   4vw  0.4vw #f6b231,
+            inset 0 0 1.5vw  0.4vw #f6b231,
+            inset 0 0 0.4vw  0.2vw #f6b231,
+            inset 0 0 0.5vw  0.1vw rgb(256,256,256);
+        border-radius: 1rem;
+    }
+.bordergray{
+        box-shadow: 
+            0 0 0.1vw  0.2vw rgb(256,256,256),   
+            0 0 0.4vw  0.6vw #CFCFCF, 
+            0 0   4vw  0.4vw #CFCFCF,
+            inset 0 0 1.5vw  0.4vw #CFCFCF,
+            inset 0 0 0.4vw  0.2vw #CFCFCF,
+            inset 0 0 0.5vw  0.1vw rgb(256,256,256);
+        border-radius: 1rem;
+}
+      
+        
+.material-icons.md-36 { font-size: 40px; }    
+
+
+</style>    
+
+
+</head>
+
+<body style="background-image: url('img/brickbackground3.jpg');width: width;" dir="rtl">
+
+<div class="header">
+        
+        <img src="img/neon-logo3.png" alt="logo" class="toplogo header" style="">
+
+</div>
+
+
+<div class="navbar borderorange"> 
+
+    <a href="#menu" class="material-icons md-36">menu</a>
+    <a href="#home" class="material-icons md-36" >home</a>
+    <a href="#movies" class="material-icons md-36">movie</a>
+    <a href="#contact" class="material-icons md-36">contact_support</a>
+   
+</div>
+
+<div class="main">      
+    <video class="bordergray video" width="80%" height="" controls>
+    <source src="sina-saee.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+
+    </video>  
+    <iframe src="https://open.spotify.com/embed/album/74Yd5O5XzXEKvTZktOJCay" width="80%" height="77px" frameborder="0" allowtransparency="true" allow="encrypted-media" style="padding-right: 1%;"></iframe>
+</div>
+
+
+<img src="img/docparrot.gif" class="footer" style="width: 8%;">
+</body>
+</html>
