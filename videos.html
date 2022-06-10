@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="/mobilestyle.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="/desktopstyle.css">
+    <link rel="stylesheet"  href="/social.css">
+    <script type="text/javascript" src="/vid/texts/descriptions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Work hard kiddo!">
+    <title>Crossover Studio</title>
+    <link rel="icon" type="image/x-icon" href="/img/logos/crossovericon.png">
+
+
+</head>
+
+<style>
+@font-face {
+  font-family: details;
+  src: url(/fonts/SalmaproMedium-0Wooo.otf);
+}
+
+
+
+</style>
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="/" class="material-icons md-30">home</a>
+    <a href="#" class="material-icons md-30">movie</a>
+    <a href="#" class="material-icons md-30">contact_support</a>
+    <a href="javascript:void(0)" class="" onclick="closeNav()">×</a>
+    <a href="#"><img class="parrot" src="/img/parrots/docparrot.gif" ></a>
+
+</div>
+
+<div class="header">
+    <a href="#menu" class="openbtn material-icons md-20" onclick="openNav()">menu</a>
+        <img src="/img/neon-logo3.png" alt="logo" class="toplogo" >
+    <hr class="borderorange">
+
+</div>
+
+
+
+
+<!------------- Desktop Navbar -------------------->
+<div class="navbar borderorange">
+
+<a href="#" class="material-icons md-20">menu</a>
+<a href="/index.html" class="material-icons md-20" >home</a>
+<a href="#movies" class="material-icons md-20">movie</a>
+<a href="#contact" class="material-icons md-20">contact_support</a>
+
+</div>
+
+
+<div id="main" class="main" style="margin-bottom: 40px;">
+    <video id="video" class="bordergray video" width="" height=""  poster="/vid/poster/sina-saee2-cover.png" controls>
+  <!--      <source src="/vid/sina-saee2.mp4" type="video/mp4">
+        Your browser does not support the video tag. -->
+    </video>
+    <iframe id="spotify" class="spotifymobile" style="border-radius:12px;margin-top: 1%;" src="https://open.spotify.com/embed/track/268mP4si3ew7OB5uTtZ2NI?utm_source=generator" width="85%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe id="spotify" class="spotifydesktop" style="border-radius:12px;margin-top: 1%;" src="https://open.spotify.com/embed/track/268mP4si3ew7OB5uTtZ2NI?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <br>
+    <div style="background-color: whitesmoke;text-align: center;margin:10px 35% 0 35%;border-radius: 15px;">
+    <a id="btnl" style="margin: 10px 15px 10px 0;font-size: 20px;color: black;display: none;" class="fa fa-arrow-left glow-white"></a>
+    <a id="btnr" style="margin: 10px 0 10px 15px;font-size: 20px;color: black;" class="fa fa-arrow-right glow-white"></a>
+    </div>
+</div>
+
+
+
+
+
+<div class="wood text-shadow" style="text-align: left;">
+    <img class="glow-white" src="/img/bboygrubby.png" alt="bboy grubby" style="width:50%;margin-top: 20px;margin-left: 20px;display: inline;">
+
+    <a href="https://www.instagram.com/saeed.sharifinejad/"><button class="btn instagram"><i class="fa fa-instagram"></i>Instagram</button></a>
+
+    <p id="des" style="font-size: 15px;color: whitesmoke;font-family: details;margin-left: 20px;">Toulani Free Style: @tiktaaksaesina <br>Music: @raadfar_  <br>Video: @rezavaezi </p>
+
+    <div class="footer" style="padding-top: 7px;">
+        <hr class="borderorange" style="border:#CFCFCF;border-width:  0.01em;">
+        <img src="/img/icy.png">
+        <!--<div class="sponsersbox">
+                    <img class="sponsers" style="width: 30%;" src="img/icy.png">
+        </div>-->
+</div>
+
+
+
+  
+
+
+
+
+
+<script>
+  
+  var spotify = document.getElementById('spotify');
+  var video_num = 1;
+  spotify.setAttribute('src', spotify_links[video_num - 1]);
+  var first_video_path = '/vid/' + video_num + '.mp4';
+  var video_path = '/vid/' + video_num + '.mp4';
+  var viedo_poster_path = '/vid/poster/' + video_num + '.png';
+  var video = document.getElementById('video');
+  var source = document.createElement('source');
+
+  
+
+  source.setAttribute('src', first_video_path);
+  source.setAttribute('type', 'video/mp4');
+
+  video.appendChild(source);
+
+  video.play();
+  console.log({
+  src: source.getAttribute('src'),
+  type: source.getAttribute('type'),
+  });
+
+
+
+  const btnr = document.getElementById('btnr');
+  btnr.addEventListener('click', function right(){   
+      video_num = video_num + 1;
+      document.getElementById("des").innerHTML = des[video_num];
+      spotify.setAttribute('src', spotify_links[video_num-1]);
+      video_path = '/vid/' + video_num + '.mp4';
+      video_poster_path = '/vid/poster/' + video_num + '.png';
+      document.getElementById('video').setAttribute('poster', video_poster_path);
+      video.pause();
+      source.setAttribute('src', video_path);
+      source.setAttribute('type', 'video/mp4');
+      video.load();
+      console.log({
+        src: source.getAttribute('src'),
+        type: source.getAttribute('type'),
+      }); 
+      if (des[video_num+1] == 'none'){
+        btnr.style.display = "none";
+        btnl.style.display = "inline-block";
+      } else {
+        btnr.style.display = "inline-block";
+        btnl.style.display = "inline-block";
+      }
+      }, 3000);
+
+      
+
+  const btnl = document.getElementById('btnl');
+  btnl.addEventListener('click', function left(){
+      video_num = video_num - 1;
+      spotify.setAttribute('src', spotify_links[video_num-1]);
+      document.getElementById("des").innerHTML = des[video_num];
+      
+      video_path = '/vid/' + video_num + '.mp4';
+      video_poster_path = '/vid/poster/' + video_num + '.png';
+      document.getElementById('video').setAttribute('poster', video_poster_path);
+      video.pause();
+      source.setAttribute('src', video_path);
+      source.setAttribute('type', 'video/mp4');
+      video.load();
+      console.log({
+        src: source.getAttribute('src'),
+        type: source.getAttribute('type'),
+      });
+      if (des[video_num-1] == 'none'){
+        btnl.style.display = "none";
+        btnr.style.display = "inline-block";
+
+      } else {
+        btnl.style.display = "inline-block";
+        btnr.style.display = "inline-block";
+
+      }
+      }, 3000);
+
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "100px";
+      document.getElementById("main1").style.marginRight = "45px";
+      document.getElementById("main1").style.marginLeft = "-25px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main1").style.marginRight= "0";
+      document.getElementById("main1").style.marginLeft = "0";
+}</script>
+</body>
+</html>

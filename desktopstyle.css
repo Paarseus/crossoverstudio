@@ -1,0 +1,161 @@
+body {
+    background-image: url('img/brickbackground3.jpg');
+    background-repeat: repeat;
+    background-size:90%;
+    background-color: rgb(21, 21, 21);
+}
+
+.sidebar {display: none;}
+.openbtn {display: none;}
+
+.navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    display: block;
+    top: 2%; /* Position the navbar at the top of the page */
+    right: 2%;
+    bottom: 2%;
+    width: 15%; /* Full width */
+    max-width: 100px;
+    border-radius: 10px;
+    animation: slideInRight;
+    animation-duration: 1s; 
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f6b231;
+  text-align: center;
+  padding-right: calc((100% - 1em)/2);
+  padding-left: calc((100% - 1em)/2);
+
+  padding-bottom: 20%;
+  padding-top: 20%;
+  text-decoration: none;
+  vertical-align: middle;
+
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+
+  /*background: #f5b231;*/
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+
+
+.footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    
+    z-index: -2;
+}
+
+.parrot {
+    right: 2%;
+    bottom: 2%;
+    padding-left: 400px;
+    animation: slideInRight;
+    animation-duration: 1s; 
+    z-index: -2;
+}
+
+.header {
+    margin: auto;
+    position: fixed;
+    display: block;
+    width: 85%;
+    /* padding-right: 12%; */
+    text-align: center;
+}
+
+.toplogo {
+    display: inline-block;
+    width:60%;
+    top: 20px;
+    text-align: center;
+    /* width: 40%; */
+}
+
+
+.video{
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.header hr{ display: none;}
+
+.main {
+    padding-top: 13%;
+    padding-right: 15%;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    /* margin-top: calc(3% + 100px); */
+    /* margin-right: calc(14% + 10px); */
+    height: 2000px; /* Used in this example to enable scrolling */
+}
+
+.borderorange{
+    box-shadow: 
+        0 0 0.1vw  0.1vw rgb(256,256,256),   
+        0 0 0.4vw  0.4vw #f6b231, 
+        0 0   4vw  0.4vw #f6b231,
+        inset 0 0 1.5vw  0.4vw #f6b231,
+        inset 0 0 0.4vw  0.2vw #f6b231,
+        inset 0 0 0.5vw  0.1vw rgb(256,256,256);
+}
+.bordergray{
+        box-shadow: 
+            0 0 0.1vw  0.2vw rgb(256,256,256),   
+            0 0 0.4vw  0.6vw #CFCFCF, 
+            0 0   4vw  0.4vw #CFCFCF,
+            inset 0 0 1.5vw  0.4vw #CFCFCF,
+            inset 0 0 0.4vw  0.2vw #CFCFCF,
+            inset 0 0 0.5vw  0.1vw rgb(256,256,256);
+        border-radius: 1rem;
+}
+      
+        /*font-size: min(5vw,60px)*/
+.material-icons.md-20 { font-size: 40px}    
+
+.spotifymobile {
+    display: none;        
+}
+
+.footer {
+    margin-top: 100px;
+    position: absolute;
+    width: 75%;
+    padding-right: 15%;
+    height: 260px;
+    text-align: center;
+    border-radius: 0px;
+}
+.footer hr{
+    border:#CFCFCF;
+    border-width:  0.01em;
+    width: 100%;
+    margin-right: 15%;
+}
+.footer img {
+    width: 200px;
+}
+
+.png-glow {
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255)) ;
+}
